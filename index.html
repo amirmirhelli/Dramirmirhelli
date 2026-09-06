@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="دکتر امیر میرهلی؛ معرفی، رزومه علمی و کاری، سوابق مشاوره و فعالیت‌های اجرایی و فرهنگی.">
+  <title>دکتر امیر میرهلی | مشاور تحصیلی</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --bg-soft:#fffaf3;
+      --card:#ffffff;
+      --card-2:#fffdf8;
+      --text:#18202f;
+      --muted:#5f6675;
+      --gold:#d5a54a;
+      --gold-2:#f0cd7c;
+      --line:rgba(213,165,74,.28);
+      --shadow:0 16px 40px rgba(32,38,49,.08);
+      --radius:26px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(213,165,74,.10), transparent 25%),
+        radial-gradient(circle at 10% 45%, rgba(213,165,74,.05), transparent 20%),
+        linear-gradient(180deg,#ffffff,#fffdf8 45%,#ffffff);
+      color:var(--text);
+      line-height:2.05;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button{font:inherit}
+    .container{width:min(1120px, calc(100% - 34px));margin:auto}
+
+    .topbar{
+      position:fixed;
+      top:0;left:0;right:0;
+      z-index:50;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(31,36,48,.08);
+    }
+    .nav{
+      min-height:84px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:max-content;
+    }
+    .brand img{
+      width:46px;height:46px;
+      object-fit:cover;
+      border-radius:14px;
+      border:1px solid var(--line);
+    }
+    .brand-text strong{display:block;font-weight:900;font-size:1.04rem}
+    .brand-text span{display:block;color:var(--muted);display:none}
+    .nav-links{
+      display:flex;align-items:center;gap:7px;flex-wrap:wrap;
+    }
+    .nav-links a{
+      padding:10px 14px;border-radius:14px;color:#243042;font-size:1.02rem;font-weight:800;
+      transition:.25s ease;
+    }
+    .nav-links a:hover{background:rgba(213,165,74,.10);color:#8a5a13}
+    .nav-cta{
+      border:1px solid var(--line)!important;
+      background:linear-gradient(135deg,rgba(213,165,74,.20),rgba(213,165,74,.08))!important;
+    }
+    .menu-btn{
+      display:none;background:#fff;border:1px solid rgba(31,36,48,.12);
+      color:#1f2430;border-radius:12px;width:44px;height:44px;
+    }
+
+    .hero{
+      min-height:88vh;
+      padding:138px 0 82px;
+      display:flex;
+      align-items:center;
+      position:relative;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:70px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      border:1px solid var(--line);
+      background:rgba(213,165,74,.07);
+      color:#9a6715;
+      padding:9px 14px;
+      border-radius:999px;
+      font-size:.96rem;
+      font-weight:800;
+      margin-bottom:18px;
+    }
+    .eyebrow::before{
+      content:"";
+      width:7px;height:7px;border-radius:50%;
+      background:var(--gold);
+      box-shadow:0 0 16px rgba(213,165,74,.8);
+    }
+    h1{
+      font-size:clamp(2.9rem,5vw,5.2rem);
+      line-height:1.15;
+      margin:0 0 18px;
+      font-weight:900;
+      letter-spacing:-1px;
+    }
+    h1 .gold{
+      background:linear-gradient(135deg,var(--gold-2),#b67c22);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .hero-lead{
+      color:#394355;
+      max-width:640px;
+      font-size:1.16rem;font-weight:600;
+      margin:0 0 28px;
+    }
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:52px;padding:0 22px;border-radius:16px;font-weight:800;
+      transition:.25s ease;border:1px solid transparent;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,#e0b45b,#a86b14);
+      color:#111;
+      box-shadow:0 12px 28px rgba(213,165,74,.18);
+    }
+    .btn-primary:hover{transform:translateY(-2px);filter:brightness(1.07)}
+    .btn-secondary{
+      border-color:rgba(31,36,48,.12);
+      background:#ffffff;
+      color:#1f2430;
+    }
+    .btn-secondary:hover{border-color:var(--line);color:var(--gold-2)}
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      max-width:680px;
+    }
+    .stat{
+      background:#ffffff;
+      border:1px solid rgba(31,36,48,.08);
+      border-radius:18px;
+      padding:18px 16px;
+    }
+    .stat b{display:block;font-size:1.5rem;color:#b67c22;line-height:1.2}
+    .stat span{font-size:.96rem;font-weight:700;color:var(--muted)}
+     .portrait-wrap{
+      position:relative;
+      max-width:470px;
+      justify-self:end;
+      isolation:isolate;
+    }
+    .portrait-wrap::before{
+      content:"";
+      position:absolute;
+      inset:-12px;
+      border-radius:36px;
+      background:linear-gradient(135deg,rgba(213,165,74,.16),transparent 48%,rgba(213,165,74,.05));
+      filter:blur(1px);
+      z-index:-2;
+    }
+    .portrait-wrap::after{
+      content:"";
+      position:absolute;
+      width:120px;height:120px;
+      border-radius:50%;
+      background:rgba(213,165,74,.14);
+      filter:blur(45px);
+      left:-35px;bottom:10%;
+      z-index:-1;
+    }
+    .portrait{
+      aspect-ratio:4 / 4.9;
+      width:100%;
+      object-fit:cover;
+      border-radius:34px;
+      border:1px solid rgba(31,36,48,.08);
+      box-shadow:var(--shadow);
+    }
+    .portrait-badge{
+      position:absolute;
+      right:-10px;
+      bottom:20px;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(12px);
+      border:1px solid var(--line);
+      padding:12px 14px;
+      border-radius:18px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      box-shadow:0 15px 35px rgba(0,0,0,.3);
+    }
+    .portrait-badge img{width:44px;height:44px;border-radius:12px;object-fit:cover}
+    .portrait-badge strong{display:block;font-size:1rem;color:#1f2430;font-weight:900}
+    .portrait-badge span{display:block;color:var(--muted);font-size:.88rem;font-weight:700}
+
+    section{padding:96px 0}
+    .section-head{margin-bottom:38px;max-width:760px}
+    .section-head .label{
+      color:#9a6715;font-weight:900;font-size:.98rem;letter-spacing:.3px
+    }
+    .section-head h2{
+      margin:7px 0 9px;
+      font-size:clamp(2.1rem,3.5vw,3rem);
+      line-height:1.35;
+      font-weight:900;
+    }
+    .section-head p{margin:0;color:var(--muted);font-size:1.03rem;font-weight:600}
+
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .resume-card{
+      background:linear-gradient(180deg,#ffffff,#fffefc);
+      border:1px solid rgba(255,255,255,.075);
+      border-radius:var(--radius);
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+      transition:.3s ease;
+    }
+    .resume-card:hover{transform:translateY(-3px);border-color:var(--line)}
+    .resume-card::before{
+      content:"";
+      position:absolute;right:0;top:0;width:4px;height:100%;
+      background:linear-gradient(var(--gold),transparent);
+      opacity:.7;
+    }
+    .card-icon{
+      width:44px;height:44px;border-radius:15px;
+      display:grid;place-items:center;
+      background:rgba(213,165,74,.11);
+      color:var(--gold-2);
+      border:1px solid var(--line);
+      font-size:1.25rem;
+      margin-bottom:15px;
+    }
+    .resume-card h3{margin:0 0 12px;font-size:1.34rem;font-weight:900;color:#18202f}
+    .resume-card ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    .resume-card li{
+      color:#2d3648;
+      position:relative;
+      padding-right:20px;
+      font-size:1.06rem;font-weight:700;
+    }
+    .resume-card li::before{
+      content:"";
+      position:absolute;right:2px;top:.84em;
+      width:6px;height:6px;border-radius:50%;background:var(--gold);
+    }
+
+    .milestones{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:24px;
+    }
+    .milestone{
+      padding:24px 18px;text-align:center;border-radius:22px;
+      background:var(--card);
+      border:1px solid rgba(31,36,48,.08);
+    }
+    .milestone strong{
+      display:block;font-size:2rem;color:var(--gold-2);font-weight:900;
+      margin-bottom:4px
+    }
+    .milestone span{color:var(--muted);font-size:.98rem;font-weight:700}
+
+    .credentials{
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;
+    }
+    .credential{
+      background:var(--card);
+      border:1px solid rgba(31,36,48,.08);
+      border-radius:20px;
+      padding:22px;
+      min-height:176px;
+      transition:.25s ease;
+    }
+    .credential:hover{border-color:var(--line);background:var(--card-2)}
+    .credential .num{
+      color:var(--gold);font-weight:900;font-size:.88rem;margin-bottom:9px
+    }
+    .credential h3{margin:0 0 7px;font-size:1.08rem;line-height:1.8;font-weight:900;color:#1f2430}
+    .credential p{margin:0;color:var(--muted);font-size:.98rem;font-weight:700}
+
+    .timeline{display:grid;gap:16px}
+    .timeline-item{
+      display:grid;
+      grid-template-columns:120px 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .timeline-year{
+      color:var(--gold-2);
+      font-weight:900;
+      background:rgba(213,165,74,.07);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:12px;
+      text-align:center;
+    }
+    .timeline-content{
+      border-right:2px solid rgba(213,165,74,.22);
+      padding:7px 22px 24px 0;
+    }
+    .timeline-content h3{margin:0 0 5px;font-size:1.16rem;font-weight:900;color:#1f2430}
+    .timeline-content p{margin:0;color:var(--muted);font-size:1.02rem;font-weight:700}
+
+    .acceptance{
+      background:
+        linear-gradient(135deg,rgba(213,165,74,.11),rgba(255,255,255,.02)),
+        var(--card);
+      border:1px solid var(--line);
+      border-radius:34px;
+      padding:38px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      align-items:center;
+      gap:20px;
+    }
+    .acceptance h2{margin:0 0 8px;font-size:clamp(1.6rem,3vw,2.5rem)}
+    .acceptance p{margin:0;color:var(--muted);font-size:1.02rem;font-weight:700}
+    .acceptance .coming{
+      min-width:180px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      text-align:center;
+      color:var(--gold-2);
+      font-weight:900;
+      background:#fffaf1;
+    }
+
+    footer{
+      border-top:1px solid rgba(31,36,48,.08);
+      padding:46px 0 52px;
+      color:var(--muted);
+      text-align:center;
+      font-size:.98rem;font-weight:700;
+    }
+    footer img{
+      width:62px;height:62px;border-radius:18px;object-fit:cover;
+      margin:0 auto 12px;border:1px solid var(--line)
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(22px);
+      transition:opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible{opacity:1;transform:none}
+
+    @media (max-width: 920px){
+      .nav-links{
+        position:absolute;top:76px;right:16px;left:16px;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        background:rgba(255,255,255,.97);
+        padding:12px;
+        border:1px solid rgba(31,36,48,.08);
+        border-radius:18px;
+        box-shadow:var(--shadow);
+      }
+      .nav-links.open{display:flex}
+      .menu-btn{display:block}
+      .hero{min-height:auto}
+      .hero-grid{grid-template-columns:1fr;gap:38px}
+      .portrait-wrap{justify-self:center;max-width:520px}
+      .portrait-badge{right:16px}
+      .credentials{grid-template-columns:repeat(2,1fr)}
+      .milestones{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width: 640px){
+      .container{width:min(100% - 22px,1180px)}
+      .brand-text span{display:none}
+      .hero{padding-top:108px}
+      h1{font-size:2.65rem}
+      .hero-lead{font-size:1.06rem}
+      .hero-stats{grid-template-columns:1fr}
+      .grid-2,.credentials{grid-template-columns:1fr}
+      .resume-card{padding:21px}
+      .timeline-item{grid-template-columns:1fr;gap:7px}
+      .timeline-year{text-align:right;width:max-content}
+      .timeline-content{padding-right:18px}
+      .acceptance{grid-template-columns:1fr;padding:24px}
+      .acceptance .coming{min-width:0}
+      section{padding:72px 0}
+    }
+  </style>
+</head>
+
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <img src="logo.jpg" alt="لوگوی دکتر امیر میرهلی">
+      <div class="brand-text">
+        <strong>دکتر امیر میرهلی</strong>
+        <span></span>
+      </div>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#resume">رزومه</a>
+      <a href="#education">سوابق علمی</a>
+      <a href="#certificates">مدارک و گواهینامه‌ها</a>
+      <a href="#activities">فعالیت‌ها</a>
+      <a href="#acceptances" class="nav-cta">قبولی‌ها</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="باز کردن منو">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">بیش از ۱۵ سال فعالیت تخصصی</span>
+        <h1>دکتر <span class="gold">امیر میرهلی</span></h1>
+        <p class="hero-lead">
+          مشاور تحصیلی، پژوهشگر و مدرس با تجربه گسترده در همراهی رتبه‌های برتر، برنامه‌ریزی تحصیلی، روان‌شناسی آموزشی و مسیرهای رشد علمی.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#resume" class="btn btn-primary">مشاهده رزومه</a>
+          <a href="#acceptances" class="btn btn-secondary">قبولی‌ها و رتبه‌ها</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat"><b>۱۵+ سال</b><span>سابقه فعالیت و مشاوره</span></div>
+          <div class="stat"><b>۱۰۰۰+</b><span>رتبه و قبولی برتر</span></div>
+          <div class="stat"><b>۴ رشته</b><span>تجربی، ریاضی، انسانی و هنر</span></div>
+        </div>
+      </div>
+
+      <div class="portrait-wrap reveal">
+        <img class="portrait" src="dr-amir-mirhelli.jpg" alt="دکتر امیر میرهلی">
+        <div class="portrait-badge">
+          <img src="logo.jpg" alt="">
+          <div>
+            <strong>دکتر امیر میرهلی</strong>
+            <span>مشاور تحصیلی و پژوهشگر</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="label">رزومه کاری</span>
+        <h2>سال‌ها تجربه در کنار رتبه‌های برتر</h2>
+        <p>مرتب‌سازی‌شده، خوانا و حرفه‌ای؛ برای معرفی دقیق سوابق علمی، تجربیات و افتخارات آموزشی.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="resume-card reveal">
+          <div class="card-icon">★</div>
+          <h3>سوابق مشاوره رتبه‌های برتر</h3>
+          <ul>
+            <li>مشاور دو نفر از رتبه‌های ۱ کشور در سال‌های ۱۳۹۷ و ۱۳۹۹</li>
+            <li>مشاور رتبه ۲ کشور در سال ۱۴۰۳</li>
+            <li>مشاور رتبه ۱ منطقه در سال ۱۳۹۹</li>
+            <li>مشاور بیش از هزار رتبه تک‌رقمی، دو رقمی، سه رقمی و قبولی برتر</li>
+            <li>فعالیت در چهار گروه آزمایشی تجربی، ریاضی، انسانی و هنر</li>
+          </ul>
+        </article>
+
+        <article class="resume-card reveal">
+          <div class="card-icon">⌛</div>
+          <h3>تجربه حرفه‌ای</h3>
+          <ul>
+            <li>بیش از ۱۵ سال سابقه کار</li>
+            <li>بیش از ۱۳ سال همکاری و فعالیت با مراکز معتبر روان‌شناسی و علوم تربیتی</li>
+            <li>ارائه خدمات مشاوره به تمامی استان‌های ایران در طول ۱۵ سال</li>
+            <li>برگزاری هزاران جلسه پرسش و پاسخ و پادکست‌های تحصیلی در فضای مجازی</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="milestones reveal">
+        <div class="milestone"><strong>۱</strong><span>رتبه ۱ دکتری ۱۳۹۴</span></div>
+        <div class="milestone"><strong>۳</strong><span>رتبه ۳ ارشد ۱۳۹۱</span></div>
+        <div class="milestone"><strong>۱۳+</strong><span>سال همکاری تخصصی</span></div>
+        <div class="milestone"><strong>۱۵+</strong><span>سال سابقه حرفه‌ای</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="label">رزومه علمی</span>
+        <h2>مسیر تحصیلی و علمی</h2>
+        <p>ترکیبی از تحصیلات دانشگاهی، روان‌سنجی، روان‌شناسی و تجربه عملی مشاوره.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-year">۱۳۹۱</div>
+          <div class="timeline-content">
+            <h3>رتبه ۳ کنکور کارشناسی ارشد</h3>
+            <p>کسب رتبه ۳ در کنکور ارشد و ادامه تحصیل در دانشگاه تهران در مقطع کارشناسی ارشد.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-year">۱۳۹۴</div>
+          <div class="timeline-content">
+            <h3>رتبه ۱ کنکور دکتری</h3>
+            <p>کسب رتبه ۱ کنکور دکتری و فارغ‌التحصیلی از دانشگاه اصفهان در مقطع دکترای تخصصی (PhD).</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-year">امروز</div>
+          <div class="timeline-content">
+            <h3>تحصیلات تکمیلی روان‌سنجی</h3>
+            <p>دانشجوی تحصیلات تکمیلی روان‌سنجی دانشگاه خوارزمی.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-year">پژوهش</div>
+          <div class="timeline-content">
+            <h3>نویسنده مقالات علمی</h3>
+            <p>فعال در موضوعات تاریخی، روان‌شناسی تاریخی، مذهبی، جامعه‌شناسی تاریخی، علوم سیاسی و دیگر حوزه‌ها در مجلات معتبر دانشگاهی داخل کشور.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="label">مدارک و گواهینامه‌ها</span>
+        <h2>دوره‌های تخصصی و حرفه‌ای</h2>
+        <p>بخشی از دوره‌ها و گواهینامه‌های تخصصی مرتبط با مشاوره، روان‌شناسی و آموزش.</p>
+      </div>
+
+      <div class="credentials">
+        <article class="credential reveal">
+          <div class="num">۰۱</div>
+          <h3>روان‌شناسی بالینی</h3>
+          <p>گواهینامه دو سال دوره‌های روان‌شناسی بالینی و سابقه فعالیت تخصصی.</p>
+        </article>
+
+        <article class="credential reveal">
+          <div class="num">۰۲</div>
+          <h3>مدیریت برنامه‌ریزی تحصیلی</h3>
+          <p>۲۰۰ ساعت آموزش از وزارت علوم، تحقیقات و فناوری.</p>
+        </article>
+
+        <article class="credential reveal">
+          <div class="num">۰۳</div>
+          <h3>تربیت مشاور تحصیلی</h3>
+          <p>۵۸ ساعت با رویکرد شناختی از دانشگاه تهران.</p>
+        </article>
+
+        <article class="credential reveal">
+          <div class="num">۰۴</div>
+          <h3>مشاوره تحصیلی حرفه‌ای</h3>
+          <p>گواهینامه حرفه‌ای مشاوره تحصیلی از مشاورین برتر استان اصفهان.</p>
+        </article>
+
+        <article class="credential reveal">
+          <div class="num">۰۵</div>
+          <h3>روان‌شناسی جنایی</h3>
+          <p>گواهینامه ۱۰ ساعت دوره‌های تئوریک روان‌شناسی جنایی.</p>
+        </article>
+
+        <article class="credential reveal">
+          <div class="num">۰۶</div>
+          <h3>RETEAMING</h3>
+          <p>مدرک بازسازی گروهی در سازمان‌ها از کشور فنلاند.</p>
+        </article>
+
+        <article class="credential reveal">
+          <div class="num">۰۷</div>
+          <h3>فناوری‌های نوین آموزشی</h3>
+          <p>۵۰ ساعت با رویکرد شناختی از دانشکده روان‌شناسی و علوم تربیتی دانشگاه تهران.</p>
+        </article>
+
+        <article class="credential reveal">
+          <div class="num">۰۸</div>
+          <h3>زبان‌های خارجی</h3>
+          <p>مدرک زبان انگلیسی و آلمانی و آشنایی با اسپانیایی، فرانسوی، عربی و ترکی.</p>
+        </article>
+
+        <article class="credential reveal">
+          <div class="num">۰۹</div>
+          <h3>پژوهش و مقاله‌نویسی</h3>
+          <p>نویسنده مقالات علمی در حوزه‌های تاریخی، روان‌شناسی، جامعه‌شناسی و علوم سیاسی.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="label">فعالیت‌های اجرایی و فرهنگی</span>
+        <h2>آموزش فراتر از کلاس درس</h2>
+        <p>فعالیت در فضای عمومی، مدارس، دانشگاه‌ها و رسانه‌های آموزشی.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="resume-card reveal">
+          <div class="card-icon">📚</div>
+          <h3>فراسوی دانش</h3>
+          <ul>
+            <li>مؤسس کتابخانه عمومی و تخصصی با عنوان «فراسوی دانش» در شهر اصفهان</li>
+          </ul>
+        </article>
+
+        <article class="resume-card reveal">
+          <div class="card-icon">🎙</div>
+          <h3>جلسات و محتوای آموزشی</h3>
+          <ul>
+            <li>برگزاری جلسات متعدد در مدارس و دانشگاه‌های مختلف کشور</li>
+            <li>برگزاری هزاران جلسه پرسش و پاسخ و پادکست تحصیلی در فضای مجازی</li>
+            <li>ارائه خدمات مشاوره به تمامی استان‌های ایران</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="acceptances">
+    <div class="container">
+      <div class="acceptance reveal">
+        <div>
+          <h2>قبولی‌ها و رتبه‌های برتر</h2>
+          <p>
+            این بخش برای دسته‌بندی قبولی‌ها بر اساس سال، رشته و دانشگاه آماده شده است.
+            اطلاعات هر سال پس از اضافه شدن، به شکل کارت‌های مرتب و قابل فیلتر نمایش داده می‌شوند.
+          </p>
+        </div>
+        <div class="coming">به‌زودی تکمیل می‌شود</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <img src="logo.jpg" alt="لوگوی دکتر امیر میرهلی">
+    <div>دکتر امیر میرهلی</div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+
+  menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
