@@ -267,8 +267,7 @@
             </ul>
           </article>
         </div>
-        <div class="metrics reveal" id="metricsStrip"></div>
-      </div>
+</div>
     </section>
 
     <section class="group-overview">
@@ -438,7 +437,7 @@
         ['رشته‌های ثبت‌شده', new Set(state.data.map(r=>r.major).filter(Boolean)).size],
         ['دانشگاه‌های ثبت‌شده', new Set(state.data.map(r=>r.university).filter(Boolean)).size],
       ];
-      $('#metricsStrip').innerHTML = metrics.map(([label,val])=>`<div class="metric"><strong>${toFa(val)}</strong><span>${label}</span></div>`).join('');
+      const metricsStripEl = $('#metricsStrip'); if(metricsStripEl){ metricsStripEl.innerHTML = metrics.map(([label,val])=>`<div class="metric"><strong>${toFa(val)}</strong><span>${label}</span></div>`).join(''); }
     }
 
     function renderChips(){
